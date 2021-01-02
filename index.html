@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+
+<body>
+  <div class="mainapp">
+    <header class="mainapp-header">
+      <h1>Micro Frontend</h1>
+    </header>
+    <div class="mainapp-main">
+      <ul class="mainapp-sidemenu">
+        <li onclick="push('/mf-product')">Products</li>
+        <li onclick="push('/vue3')">Vue3</li>
+        <li onclick="push('/purehtml')">Purehtml</li>
+      </ul>
+      <main id="mf-container"></main>
+    </div>
+  </div>
+
+  <script>
+    function push(subapp) { history.pushState(null, subapp, subapp) }
+  </script>
+</body>
+
+</html>
